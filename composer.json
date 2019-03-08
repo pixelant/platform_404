@@ -1,0 +1,23 @@
+{
+  "name": "pixelant/platform-404",
+  "description": "TYPO3 subtheme based on t3kit project.",
+  "type": "library",
+  "keywords": ["platform.sh", "404"],
+  "license": "GPL-2.0+",
+  "authors": [
+    {
+      "name": "Resultify",
+      "homepage": "https://resultify.se"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "git",
+      "url": "https://github.com/pixelant/platform_404"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {
+    "php": "^7.0"
+  }
+}
