@@ -1,0 +1,11 @@
+
+.idea/
+
+._.DS_Store
+.DS_Store
+.docker-sync/
+
+.unison*
+.vscode/
+
+.env
