@@ -11,4 +11,12 @@ if (!$createdDirectory || !file_exists(PLATFORM_404_FILE_PATH)) {
 
 chmod(PLATFORM_404_FILE_PATH, 02775);
 file_put_contents(PLATFORM_404_FILE_PATH . '/' . 'test.html', PHP_EOL . 'Test is true' . PHP_EOL);
-file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', PHP_EOL . 'Test: <!--#include virtual="test.html" -->' . PHP_EOL);
+file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html',
+    '
+Test: 
+<!--# if expr="$HTTP_HOST = www.test-404-7e7xptq-wrtq7jx2itcg6.eu.platform.sh" -->
+Host is www.test-404-7e7xptq-wrtq7jx2itcg6.eu.platform.sh. <!--# include file="test.html" -->
+<!--# else -->
+<!--# include file="test.html" -->
+<!--# endif -->
+');
