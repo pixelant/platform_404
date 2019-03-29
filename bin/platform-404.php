@@ -10,5 +10,5 @@ if (!$createdDirectory || !file_exists(PLATFORM_404_FILE_PATH)) {
 }
 
 chmod(PLATFORM_404_FILE_PATH, 02775);
-
-file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', PHP_EOL . 'Test: <!--#echo var="HTTP_HOST"-->' . PHP_EOL);
+file_put_contents(PLATFORM_404_FILE_PATH . '/' . 'test.html', PHP_EOL . 'Test is true' . PHP_EOL);
+file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', PHP_EOL . 'Test: <!--#include virtual="test.html" -->' . PHP_EOL);
