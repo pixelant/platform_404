@@ -1,6 +1,6 @@
 <?php
 
-define(PLATFORM_404_FILE_PATH, 'web/typo3temp/assets/platform-404/');
+define('PLATFORM_404_FILE_PATH', 'web/typo3temp/assets/platform-404/');
 
 $createdDirectory = mkdir(PLATFORM_404_FILE_PATH, true);
 
