@@ -72,15 +72,15 @@ $out = '';
 for ($i=0; $i < count($hostDomains); $i++) {
     $hostDomain = $hostDomains[$i];
 
-    if ($i === 0) {
+    /*if ($i === 0) {
         $out .= '<!--# if expr="$HTTP_HOST = ' . $hostDomain . '" -->' . PHP_EOL;
     } else {
         $out .= '<!--# elif expr="$HTTP_HOST = ' . $hostDomain . '" -->' . PHP_EOL;
-    }
+    }*/
 
     $out .= '    <!--# include file="' . $hostDomain . '.html" -->' . PHP_EOL;
 }
-
+/*
 $out .= '<!--# else -->
 <!DOCTYPE html>
 <html>
@@ -94,5 +94,5 @@ $out .= '<!--# else -->
 </body>
 </html>
 <!--# endif -->';
-
+*/
 file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', $out);
