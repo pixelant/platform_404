@@ -81,8 +81,8 @@ for ($i=0; $i < count($hostDomains); $i++) {
     $out .= '<!--# include file="' /*. str_replace('.', '_', $hostDomain)*/ . 'test.html" -->';
 }
 
-/*$out .= '<!--# else -->
-<!DOCTYPE html>
+/*$out .= '<!--# else -->*/
+$out = '<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
@@ -93,6 +93,7 @@ for ($i=0; $i < count($hostDomains); $i++) {
     <p>The page you requested could not be found.</p>
 </body>
 </html>
-<!--# endif -->';*/
+' . $out;
+/*<!--# endif -->';*/
 
-file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', iconv("UTF-8","ASCII//TRANSLIT", $out));
+file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', $out);
