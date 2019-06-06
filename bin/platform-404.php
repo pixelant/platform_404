@@ -86,14 +86,15 @@ $out = '<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8" />
-	<title>404 - Page Not Found</title>
+	<title>404 — Page Not Found 😞</title>
 </head>
 <body>
     <h1>404 - Page Not Found</h1>
     <p>The page you requested could not be found.</p>
+    ' . $out . '
 </body>
 </html>
-' . $out;
+';
 /*<!--# endif -->';*/
 
 file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', $out);
