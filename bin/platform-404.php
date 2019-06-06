@@ -61,7 +61,7 @@ for ($i=0; $i < count($hostDomains); $i++) {
     }
 
     file_put_contents(
-        PLATFORM_404_FILE_PATH . '/' . $hostDomain . '.html',
+        PLATFORM_404_FILE_PATH . '/' . str_replace('.', '_', $hostDomain) . '.html',
         $returnData . '<!-- 404 fetched ' . date('c') . ' -->'
     );
 
@@ -78,7 +78,7 @@ for ($i=0; $i < count($hostDomains); $i++) {
         //$out .= '<!--# elif expr="$HTTP_HOST = ' . $hostDomain . '" -->' . PHP_EOL;
     }
 
-    $out .= '    <!--# include file="' . $hostDomain . '.html" -->' . PHP_EOL;
+    $out .= '<!--# include file="' . str_replace('.', '_', $hostDomain) . '.html" -->' . PHP_EOL;
 }
 
 /*$out .= '<!--# else -->
