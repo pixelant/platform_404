@@ -95,4 +95,4 @@ for ($i=0; $i < count($hostDomains); $i++) {
 </html>
 <!--# endif -->';*/
 
-file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', iconv("UTF-8","ASCII", $out));
+file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', iconv("UTF-8","ASCII//TRANSLIT", $out));
