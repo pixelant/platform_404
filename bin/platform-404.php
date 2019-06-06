@@ -78,7 +78,7 @@ for ($i=0; $i < count($hostDomains); $i++) {
         //$out .= '<!--# elif expr="$HTTP_HOST = ' . $hostDomain . '" -->' . PHP_EOL;
     }
 
-    $out .= '<!--# include file="' /*. str_replace('.', '_', $hostDomain)*/ . 'test.html" -->' . PHP_EOL;
+    $out .= '<!--# include file="' /*. str_replace('.', '_', $hostDomain)*/ . 'test.html" -->';
 }
 
 /*$out .= '<!--# else -->
@@ -95,4 +95,4 @@ for ($i=0; $i < count($hostDomains); $i++) {
 </html>
 <!--# endif -->';*/
 
-file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', $out);
+file_put_contents(PLATFORM_404_FILE_PATH . '/' . '404.html', iconv("UTF-8","ASCII", $out));
